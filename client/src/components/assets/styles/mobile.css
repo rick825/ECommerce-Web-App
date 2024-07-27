@@ -1,0 +1,108 @@
+@media only screen and (max-width: 600px) {
+    body{
+        overflow-y: auto;
+    }
+    
+    .main{
+        flex-direction: column;
+        margin-top: 6rem;
+    }
+
+    .main .cont{
+        width: 100%;
+        height: 100%;
+    }
+
+    .main .mainleftdiv{
+        display: none;
+    }
+
+    .main .mainrightdiv{
+        width: 100%;
+        margin-top: 0rem;
+    }
+
+    .main .mainrightdiv h2{
+        width: 100%;
+        /* text-align: center; */
+    }
+
+    .main .mainrightdiv p{
+        margin-top: 2rem;
+    }
+
+    .mainrightcont{
+        height: 45rem;
+    }
+
+    .mainrightcont .main-box{
+        width: 25rem;
+        height: 15rem;
+        margin-top: 2rem;
+    }
+
+    .mainrightcont .main-box1{
+        left: 30%;
+    }
+
+
+    .mainrightcont .maincube{
+        width: 4rem;
+        height: 12rem;
+        margin-top: 4rem;
+    }
+
+    .mainrightcont .maincube1{
+        left: 80%;
+    }
+
+    .mainrightcont .maincube2{
+        left:8%;
+    }
+
+
+    /* header */
+    .nav .navleft{
+        width: 40%;
+        padding: 3rem 0;
+        margin-left: -1.6rem;
+    }
+
+    .navright .navlist{
+        margin-right: 3rem;
+    }
+    /* end header */
+
+    /* signup/login section */
+   .loginsec{
+    height: 100%;
+    overflow-y: auto;
+    flex-direction: column;
+    margin-top: 9rem;
+   }
+
+   .logs{
+    width: 100%;
+   }
+
+   .leftlogin{
+    margin-top: 0%;
+   }
+
+   
+  .leftlogin .llup{
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .form{
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .form input{
+   padding: 1rem 6rem;  
+}
+
+    /* end signup/login section */
+}

@@ -1,0 +1,180 @@
+.admin{
+    width: 100%;
+    height: 78rem;
+    background-color: rgb(246, 236, 248);
+}
+
+.admin .admin-cont{
+    width: 100%;
+}
+
+.admin .admin-bot{
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.admin-button{
+    width: 40%;
+    display: flex;
+    gap:4rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-button button{
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: 0.2s ease;
+    background-color: white;
+}
+
+.admin-button button:hover{
+    background-color: azure;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+
+/* main table */
+.main-table{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+   
+}
+
+.main-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 10px;
+}
+
+.main-table th,.main-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+}
+
+.main-table th {
+    width: 10%;
+    background-color: rgb(122, 22, 147);
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.main-table td{
+    font-size: 1.5rem;
+}
+
+.main-table td img{
+    width: 50px;
+    height: 50px;
+}
+
+.tableBtnMain{
+    display: flex;
+    gap:2rem;
+}
+
+.tableBtnMain .tableBtn{
+    padding: 0.5rem 2rem;
+    background-color: transparent;
+    border-radius: 6px;
+    border: 0.2px solid #dddddd;
+    transition: 0.2s ease;
+}
+
+.tableBtnMain .tableBtn:hover{
+    border-color: transparent;
+    cursor: pointer;
+    background-color: rgb(122, 22, 147);
+    color: white;
+}
+/* end main table */
+
+/* form */
+.formClass{
+    position: fixed;
+    right:26%;
+    display: flex;
+    z-index: 10000000;
+   
+}
+
+.formClass .form{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 10000;
+    padding: 6rem;
+    display: flex;
+    align-items: center;
+    gap:5rem;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.formClass .form .formHead{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: -2rem;
+    justify-content: space-between;
+}
+
+.formClass .form h2{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+
+.formClass .form h3{
+    font-size: 2rem;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.formClass .form .form-group{
+    display: flex;
+    gap:1.5rem;
+}
+
+.formClass .form .form-group label{
+    width: 50%;
+    margin-top: 2rem;
+}
+
+
+.formClass .form button{
+    background-color: rgb(122, 22, 147);
+}
+
+.createAdmin .formClass{
+    top:2%;
+}
+
+.CreateProduct .formClass{
+  top:-4%;
+}
+
+.CreateProduct  .formClass button{
+    margin-top: -2.5rem;
+}
+/* end form */
+
+
+/* see admin */
+.seeadmin{
+  margin-top: 0rem;
+}
+/* end see admin */

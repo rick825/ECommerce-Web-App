@@ -1,0 +1,131 @@
+.categories{
+    width: 100%;
+    height: 77rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12rem;
+}
+
+.categories .catecont{
+    width: 100%;
+}
+
+.topcate .head{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.head h2{
+    font-weight: 200;
+}
+
+.botcate .productList{
+    width: 100%;
+    display: flex;
+    gap:2rem;
+}
+
+.botcate{
+    width: 100%;
+    height: 76%;
+    display: flex;
+    justify-content: center;
+}
+
+.botcate .productList{
+    width: 87%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding: 2rem 1rem;
+}
+
+
+/* product */
+.botcate .productList .prod{
+    width: 30.8rem;
+    height: 44rem;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.prod .prod-img {
+    overflow: hidden;
+    height: 70%;
+    padding: 1rem;
+  
+}
+
+
+.prod-img img{
+    position: relative;
+    width: 100%;
+    height: 29rem;
+    border-radius: 6px;
+    /* object-fit: cover; */
+    transition: 0.4s ease;
+}
+
+.prod-img img:hover{
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+.prod-info{
+    display: flex;
+    flex-direction: column;
+    padding: 0.4rem 1.5rem;
+    gap:0.5rem;
+    
+}
+
+.prod-info .prod-info-top h2{
+    font-family: montserrat;
+    cursor: pointer;
+}
+
+.prod-info .prod-info-top h2:hover{
+    color: rgb(75, 75, 75);
+}
+
+.prod-info .prod-info-desc{
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+.prod-info .prod-info-top,.prod-info .prod-info-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prod-info .prod-info-button h2{
+ font-size: 1.4rem;
+ margin-top: 0.3rem;
+ cursor: pointer;
+}
+
+.prod-info .prod-info-button h2:hover{
+   color: rgb(60, 60, 60);
+} 
+
+.prod-info .prod-info-button span{
+    border-bottom: 1px solid black;
+    padding-bottom: 2.5px;
+}
+
+.prod-info-button .wishlist{
+    display: flex;
+    gap: 0.6rem;
+}
+
+.prod-info-button  img{
+    width: 20px;
+}
+
+/* end product */

@@ -1,0 +1,245 @@
+.bag{
+    width: 100%;
+    display: flex;
+}
+
+.bagcont{
+    height: 65rem;
+}
+
+/* bag left */
+.bag .bagleft{
+    width: 60%;
+}
+
+.bagleft .bagtop{
+  margin-left: 2.5rem;
+}
+
+.bagleft .baglist{
+    height: 62rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    padding: 2rem;
+    overflow-y: scroll;
+    padding-top: 0;
+}
+
+
+
+.baglist::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.baglist::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.baglist::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+.baglist .bagitem{
+    width: 100%;
+    min-height: 25rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+    display: flex;
+    padding: 1.5rem;
+    gap:1.5rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+.bagitem .bagitemleft{
+   width: 30%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.bagitem .bagitemleft .bagitemimg{
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+
+}
+
+.bagitem .bagitemleft img{
+    width: 100%;
+    height: 100%;
+  object-fit: cover;
+}
+
+.bagitem .bagitemright{
+    width: 70%;
+    display: flex;
+    gap:1.5rem;
+}
+
+.bagitem .bagiteminfo{
+    width: 60%;
+}
+
+.bagitem .bagiteminfo h2{
+ font-weight: 200;
+ font-size: 2rem;
+}
+
+.bagitem .bagiteminfo p{
+    width: 90%;
+    margin-top: 1.4rem;
+    font-size: 1.3rem;
+}
+
+.bagitem .bagiteminfo .bagitembutton{
+    margin-top: 1.6rem;
+    display: flex;
+    gap:1.2rem;
+    margin-left: -1rem;
+}
+
+.bagitembutton .btn{
+  padding: 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.bagitembutton .btn span{
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid black;
+}
+
+
+.bagitemright .bagitemqty h2{
+  font-weight: 200;
+}
+
+.bagitemqty  .bagqtyinput{
+    margin-top: 0.5rem;
+}
+
+.bagitemqty button{
+    padding: 1rem;
+}
+
+.bagitemprice{
+margin-left: 10rem;
+display: flex;
+flex-direction: column;
+
+}
+
+.bagitemprice h2{
+    font-weight: 200;
+    font-size: 1.8rem;
+}
+
+
+.bagitemprice h3{
+    font-size: 1.8rem;
+}
+/* end bag left */
+
+/* bag right */
+.bag .bagright{
+    width: 40%;
+    padding: 2rem;
+    
+}
+
+
+.bagright .bagtotal{
+    width: 95%;
+    height: 35rem;
+    padding: 2rem;
+    border-radius: 6px;
+    margin-top: 2rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.bagtotalhead h2{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.bagtotalbot .bagtotalitem{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 2rem;
+}
+
+.bagtotalitem .itemname{
+    /* width: 70%; */
+}
+
+.bagtotalitem .itemname h2{
+    font-weight: 200;
+}
+
+.bagtotalitem .itemprice{
+    width: 30%;
+    display: flex;
+    gap:1rem;
+    font-size: 1.2rem;
+}
+
+.bagtotalitem .itemprice h3{
+    font-weight: 200;
+}
+
+.bagtotalitemhead{
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.bagtotalitemhead h2{
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.bagtotalbot .bagtotalmain{
+    border-top: 1px solid black;
+    padding-top: 2rem;
+    margin-top: 4rem;
+}
+
+.bagtotalmain .itemname h2 , .bagtotalmain .itemprice h3{
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    display: inline;
+    align-items: center;
+}
+
+.bagtotalbtn{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.bagtotalbtn button{
+    padding: 1rem 20rem;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(245, 195, 32);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.bagtotalbtn button:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/* end bag right */

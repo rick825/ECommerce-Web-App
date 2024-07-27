@@ -1,0 +1,214 @@
+.user{
+    width: 100%;
+    height: 67rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.user .userdiv{
+    width: 100%;
+}
+
+/* user top */
+.usertop{
+  display: flex;
+  height: 55%;
+}
+
+.usertop .usertopcont{
+ height: 100%;
+}
+
+.usertopleft{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.usertopleft .userimg{
+ position: relative;
+ width: 20rem;
+ height: 20rem;
+ border: 1px solid black;
+ overflow: hidden;
+ border-radius: 50%;
+}
+
+.usertopleft .userimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.usertopleft  .username h1{
+    font-weight: 200;
+    margin-top: 1rem;
+}
+
+.userhead{
+    width: 100%;
+}
+
+.userhead h2{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.usertopmid{
+    width: 30%;
+    display: flex;
+    gap:2rem;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+
+ .userinfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap:2.2rem;
+}
+
+.userinfo .uinfo h2{
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+
+.userinfo .uinfo p{
+    margin-top: 0.4rem;
+    font-size: 1.4rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 0.5px solid rgb(141, 140, 140);
+}
+
+.usertopright{
+    width: 40%;
+    padding-top: 5rem;
+}
+
+.addressinfo{
+ display: flex;
+ gap: 2rem;
+ flex-wrap: wrap;
+ margin-top: 1rem;
+}
+
+
+.addressinfo .address{
+    width: 18rem;
+    height: 12rem;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.addressinfo .address h3{
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+/* end user top */
+
+/* user bot */
+.userbot{
+ display: flex;
+ height: 45%;
+ padding: 2rem;
+}
+
+.userbot .userbotleft{
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.orders{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    overflow-x: scroll;
+    padding-bottom: 2rem;
+}
+
+.orders::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.orders::-webkit-scrollbar
+{
+	max-width: 8px;
+	background-color: #F5F5F5;
+}
+
+.orders::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+.order{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    min-width: 52rem;
+    display: flex;
+    gap:1.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.order .orderimg{
+    width: 20rem;
+    height: 15rem;
+}
+
+
+.order .orderimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.order .orderinfo{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+.order .orderinfo p{
+    font-size: 1.2rem;
+}
+
+.order .orderinfo h3{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.order .orderadd{
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+}
+
+.order .orderadd h3{
+    font-size: 1.5rem;
+    font-size: 200;
+}
+
+.order .orderadd p{
+    font-size: 1.1rem;
+}
+/* end user bot */

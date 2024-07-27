@@ -1,0 +1,35 @@
+.admin-top{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:2rem;
+    padding: 4rem 8rem;
+    background-color: rgb(246, 236, 248);
+}
+
+.admin-top h2{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+
+.admin-top  .navigation ul{
+    display: flex;
+    gap:2rem;
+    align-items: center;
+    list-style: none;
+}
+
+
+.admin-top  .navigation a{
+    color: black;
+    font-size: 1.3rem;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.admin-top  .navigation a:hover{
+    color: crimson;
+}
