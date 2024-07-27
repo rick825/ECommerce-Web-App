@@ -6,6 +6,10 @@ const addressSchema = mongoose.Schema({
      type: Number,
      required: true
     },
+    name:{
+        type: String,
+        required: true
+    },
     street: {
         type: String,
         required: true,
@@ -121,7 +125,8 @@ const orderSchema = mongoose.Schema({
     totalQuantity:{
         type: Number,
         required: true
-    }
+    },
+    address: addressSchema
 });
 
 

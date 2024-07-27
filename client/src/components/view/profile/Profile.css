@@ -137,6 +137,7 @@
  display: flex;
  height: 45%;
  padding: 2rem;
+ padding-top: 4rem;
 }
 
 .userbot .userbotleft{
@@ -164,7 +165,8 @@
 
 .orders::-webkit-scrollbar
 {
-	max-width: 8px;
+	width: 12px;
+    height: 8px;
 	background-color: #F5F5F5;
 }
 

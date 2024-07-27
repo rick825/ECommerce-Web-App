@@ -83,7 +83,7 @@ const Profile = () => {
              {loggedInUser.addresses.length > 0 ? (
                 loggedInUser.addresses.map((add)=>(
                     <div className="address">
-                    <h3>Address Name</h3>
+                    <h3>{add.name}</h3>
                     <p>{add.street}, {add.city}, {add.state} </p>
                     <p>{add.country}</p>
                     <p>Pin: {add.postalCode}</p>
@@ -120,10 +120,10 @@ const Profile = () => {
                      </div>
                    </div>
                   <div className="orderadd">
-                    <h3>Address Name</h3>
-                     <p>1234, Main Street, New York, NY 10001</p>
-                     <p>United States</p>
-                    <p>Pin: 800000</p>
+                    <h3>{order.address.name}</h3>
+                     <p>{order.address.street}, {order.address.city}, {order.address.state} </p>
+                     <p>{order.address.country}</p>
+                    <p>Pin: {order.address.postalCode}</p>
                     </div>
                  </div>
               </div>

@@ -112,9 +112,9 @@ exports.updateProfile = async (req,res)=>{
 //add address
 exports.addAddress = async (req, res) => {
   try {
-    const { street, city, state, postalCode, country, userid, id } = req.body;
+    const {name, street, city, state, postalCode, country, userid, id } = req.body;
 
-    if (!street || !city || !state || !postalCode || !country || !userid || !id) {
+    if (!name || !street || !city || !state || !postalCode || !country || !userid || !id) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
@@ -124,7 +124,7 @@ exports.addAddress = async (req, res) => {
       return res.status(404).json({ error: 'User not found' });
     }
 
-    const newAddress = { id, street, city, state, postalCode, country };
+    const newAddress = { id,name, street, city, state, postalCode, country };
 
     if (!user.addresses) {
       user.addresses = [];
@@ -386,12 +386,10 @@ exports.deleteProduct = [
 //order
 exports.postOrder = async (req, res) => {
   try {
-    const { products, userid } = req.body;
+    const { products, userid, address } = req.body;
+    console.log("Address--->",address);
 
-    console.log("Received products:", products);
-
-
-    if (!Array.isArray(products) || !userid) {
+    if (!Array.isArray(products) || !userid || !address) {
       return res.status(400).json({ error: 'Invalid request data' });
     }
 
@@ -399,6 +397,12 @@ exports.postOrder = async (req, res) => {
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
+
+    const add = user.addresses.find(addr => addr.id === address);
+    if (!address) {
+      return res.status(404).json({ error: 'Address not found' });
+    }
+
 
     const totalQuantity = products.reduce((sum, item) => sum + item.quantity, 0);
     const totalPrice = products.reduce((sum, item) => sum + (item.product.price * item.quantity), 0);
@@ -410,7 +414,8 @@ exports.postOrder = async (req, res) => {
         quantity: item.quantity
       })),
       totalQuantity: totalQuantity,
-      totalprice: totalPrice
+      totalprice: totalPrice,
+      address: add
     });
 
     await order.save();

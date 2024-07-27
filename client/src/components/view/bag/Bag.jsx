@@ -11,6 +11,7 @@ const Bag = () => {
   const [bagTotal, setBagTotal] = useState(0);
   const [quantities, setQuantities] = useState({});
   const {loggedInUser,setLoggedInUser} = useLoginStatus();
+  const [selectedAddress, setSelectedAddress] = useState(null);
 
   useEffect(() => {
     const initialQuantities = {};
@@ -76,21 +77,27 @@ const Bag = () => {
     }));
 
       const userid = loggedInUser._id;
+       
+      console.log("Selected Addresss",selectedAddress);
 
-
-      const response = await axios.post('/api/postOrders', { products,userid }, {
-        headers: {
-          'Content-Type': 'application/json'
+      if(bag.length  === 0){
+        toast.warning("Your bag is empty");
+      }else{
+        const response = await axios.post('/api/postOrders', { products,userid,address: selectedAddress }, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+  
+        if (response.status === 201) {
+          toast.success('Order placed successfully!');
+          setBag([]); 
+          setLoggedInUser(response.data.user);
+        } else {
+          toast.error('Failed to place order');
         }
-      });
-
-      if (response.status === 201) {
-        toast.success('Order placed successfully!');
-        setBag([]); 
-        setLoggedInUser(response.data.user);
-      } else {
-        toast.error('Failed to place order');
       }
+
     } catch (error) {
       console.error('Error placing order:', error);
       toast.error('Error placing order');
@@ -186,6 +193,34 @@ const Bag = () => {
                 <p>(Inc. Tax)</p>
               </div>
             </div>
+          </div>
+          <div className="selectaddress">
+          <h2>Select Address:</h2>
+            {loggedInUser.addresses && loggedInUser.addresses.length > 0 ? (
+              <div className="addressList">
+                {loggedInUser.addresses.map(address => (
+                  <div key={address.id} className="addressItem">
+                    <input
+                      type="radio"
+                      id={`address-${address.id}`}
+                      name="selectedAddress"
+                      value={address.id}
+                      checked={selectedAddress === address.id}
+                      onChange={() => setSelectedAddress(address.id)}
+                    />
+                    <label htmlFor={`address-${address.id}`}>
+                      <h4>{address.name}</h4>
+                      <p>{address.street}, {address.city} </p>
+                      <p>{address.state}</p>
+                      <p>{address.country}</p>
+                      <p>Pin - {address.postalCode} </p>
+                    </label>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <p>No saved addresses. Please add an address to proceed.</p>
+            )}
           </div>
           <div className="bagtotalbtn">
             <button onClick={handleProceedToBuy}>Proceed To Buy</button>

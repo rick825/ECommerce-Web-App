@@ -6,6 +6,7 @@ import { useLoginStatus } from '../../../context/LoginContext';
 const AddAddress = ({setShowAddressForm}) => {
 
     const [formData, setFormData] = useState({
+        name:'',
         street: '',
         city: '',
         state: '',
@@ -65,6 +66,19 @@ const AddAddress = ({setShowAddressForm}) => {
                <div className="formHead">
                  <h2>Add Address:</h2>
                  <h3 onClick={()=>handleForm(false)}>X</h3>
+               </div>
+               <div className="form-group">
+                 <label htmlFor="name">Address Name:</label>
+                 <input
+                   type="text"
+                   className="form-control"
+                   id="name"
+                   name="name"
+                   placeholder="Enter Name"
+                   value={formData.name}
+                   onChange={handleChange}
+                   required
+                 />
                </div>
                <div className="form-group">
                  <label htmlFor="street">Street:</label>
