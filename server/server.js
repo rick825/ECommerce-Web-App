@@ -15,7 +15,7 @@ if (result.error) {
 
 const connectDb = require('./services/db/db');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(morgan('tiny'));
@@ -40,13 +40,12 @@ connectDb();
 app.use('/',require('./services/routes/routes'));
 
 //build
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
-
 app.listen(PORT, () => {
-  console.log(`Server is running on port http://localhost:${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });

@@ -170,7 +170,6 @@ route.get('/api/product/:id', async (req, res) => {
 route.get('/api/getProductInCategory/:category',async (req,res)=>{
   try {
     const {category} = req.params;
-    console.log("category->",category);
     const categoryData = await Category.findOne({ name: category });
     
     if (!categoryData) {
@@ -186,8 +185,6 @@ route.get('/api/getProductInCategory/:category',async (req,res)=>{
         return product;
       })
     );
-
-    console.log("Products",products);
 
     return res.status(200).json({ products });
 
